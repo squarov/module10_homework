@@ -1,0 +1,131 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+  
+.chat {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+  
+.chat-content {
+  display: grid;
+  justify-content: end;
+  padding: 15px 20px 24px 30px;
+  background-color: #5c8ab3;
+}
+  
+.chat-message {
+  position: relative;
+  padding: 3px 20px 11px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 20px 4px 4px 20px;
+  max-width: 425px;
+  word-break: break-word;
+}
+  
+.chat-message:hover .chat-message-button, .chat-message:focus .chat-message-button {
+  visibility: visible;
+}
+  
+.chat-message-text {
+  margin: 0;
+  display: block;
+}
+  
+.chat-message-name {
+  display: inline-block;
+  margin-bottom: 2px;
+  font-size: 12px;
+  line-height: 16px;
+  color: #6994ba;
+}
+  
+.chat-message-button {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  top: -5px;
+  right: -5px;
+  padding: 0;
+  visibility: hidden;
+  background-color: #ffffff;
+  background-image: url("img/icon-cross.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  border: none;
+  border-radius: 50%;
+  font: inherit;
+  font-size: 0;
+  user-select: none;
+  touch-action: manipulation;
+  cursor: pointer;
+}
+  
+.chat-message + .chat-message {
+  margin-top: 12px;
+}
+  
+.chat-form {
+  display: flex;
+  align-items: center;
+  padding: 32px 20px;
+  background-color: #265681;
+}
+  
+.chat-form-input {
+  flex-grow: 1;
+  margin-right: 16px;
+  padding: 9px 20px 11px;
+  border: 2px solid #ffffff;
+  background-color: #ffffff;
+}
+  
+.chat-form-input::placeholder {
+    color: #cccccc;
+}
+  
+.chat-form-input:hover {
+  border-color: #56cf4c;
+  outline: none;
+}
+  
+.chat-form-input:focus {
+  border-color: #9edcff;
+  outline: none;
+}
+  
+.chat-form-input, .chat-form-button, .geo {
+  border-radius: 50px;
+  font: inherit;
+}
+  
+.chat-form-button, .geo {
+  flex-shrink: 0;
+  padding: 9px 20px;
+  color: #ffffff;
+  background-color: #39b54a;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+  
+.chat-form-button:active, .geo:active {
+  background-color: #208b44;
+  box-shadow: none;
+}
+
+.geo {
+  margin-left: 17px;
+}
